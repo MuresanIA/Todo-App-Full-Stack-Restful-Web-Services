@@ -2,7 +2,7 @@
 GET /users/{user_name}/todos
 
 2. Delete a Todo of a User
-DELETE /users/{user_name}/todos/{todo_id}
+DELETE /users/{user_name}/todos/{id}
 
 3.Edit /Update a Todo
 PUT /{todo_id}/users/{user_name}/todos
