@@ -23,12 +23,13 @@ public class TodoHardCodedService {
     public List<Todo> findAll() {
         return todos;
     }
-        // If the id of the to-do is -1 we want to insert it in
-    public Todo save(Todo todo){
-        if (todo.getId()== -1){
+
+    // If the id of the to-do is -1 we want to insert it in
+    public Todo save(Todo todo) {
+        if (todo.getId() == -1 || todo.getId() == 0) {
             todo.setId(++idCounter);
             todos.add(todo);
-        }else{
+        } else {
             deleteById(todo.getId());
             todos.add(todo);
         }
@@ -47,8 +48,8 @@ public class TodoHardCodedService {
     }
 
     public Todo findById(long id) {
-        for (Todo todo : todos){
-            if (todo.getId() == id){
+        for (Todo todo : todos) {
+            if (todo.getId() == id) {
                 return todo;
             }
         }
