@@ -4,26 +4,24 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Todo {
-
     private long id;
     private String username;
     private String description;
     private Date targetDate;
     private boolean isDone;
 
-    protected Todo(){
-        
+    protected Todo() {
+
     }
 
-
     public Todo(long id, String username, String description, Date targetDate, boolean isDone) {
+        super();
         this.id = id;
         this.username = username;
         this.description = description;
         this.targetDate = targetDate;
         this.isDone = isDone;
     }
-
 
     public long getId() {
         return id;
@@ -61,22 +59,31 @@ public class Todo {
         return isDone;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Todo todo = (Todo) o;
-        return id == todo.id;
+    public void setDone(boolean isDone) {
+        this.isDone = isDone;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (int) (id ^ (id >>> 32));
+        return result;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Todo other = (Todo) obj;
+        if (id != other.id)
+            return false;
+        return true;
+    }
+
 
 }

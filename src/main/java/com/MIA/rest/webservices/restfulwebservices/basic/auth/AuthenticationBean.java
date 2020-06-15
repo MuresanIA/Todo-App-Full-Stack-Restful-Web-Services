@@ -2,14 +2,9 @@ package com.MIA.rest.webservices.restfulwebservices.basic.auth;
 
 public class AuthenticationBean {
 
-
     private String message;
 
     public AuthenticationBean(String message) {
-        this.message = message;
-    }
-
-    public void setMessage(String message) {
         this.message = message;
     }
 
@@ -17,10 +12,13 @@ public class AuthenticationBean {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     @Override
     public String toString() {
-        return "HelloWorldBean{" +
-                "message='" + message + '\'' +
-                '}';
+        return String.format("HelloWorldBean [message=%s]", message);
     }
+
 }

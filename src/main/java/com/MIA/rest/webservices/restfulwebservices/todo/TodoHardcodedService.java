@@ -9,24 +9,23 @@ import java.util.List;
 
 
 @Service
-public class TodoHardCodedService {
+ public class TodoHardcodedService {
 
     private static List<Todo> todos = new ArrayList<>();
     private static int idCounter = 0;
 
     static {
-        todos.add(new Todo(++idCounter, "alex", "Learn to code", new Date(), false));
-        todos.add(new Todo(++idCounter, "alex", "Learn to implement new features", new Date(), false));
-        todos.add(new Todo(++idCounter, "alex", "Learn to be positive", new Date(), false));
+        todos.add(new Todo(++idCounter, "alex","Learn to Code 2", new Date(), false ));
+        todos.add(new Todo(++idCounter, "alex","Learn about Angular 2", new Date(), false ));
+        todos.add(new Todo(++idCounter, "alex","Learn about Spring", new Date(), false ));
     }
 
     public List<Todo> findAll() {
         return todos;
     }
 
-    // If the id of the to-do is -1 we want to insert it in
     public Todo save(Todo todo) {
-        if (todo.getId() == -1 || todo.getId() == 0) {
+        if(todo.getId()==-1 || todo.getId()==0) {
             todo.setId(++idCounter);
             todos.add(todo);
         } else {
@@ -39,20 +38,23 @@ public class TodoHardCodedService {
     public Todo deleteById(long id) {
         Todo todo = findById(id);
 
-        if (todo == null) return null;
+        if(todo==null) return null;
 
-        if (todos.remove(todo)) {
+        if(todos.remove(todo)) {
             return todo;
         }
+
         return null;
     }
 
     public Todo findById(long id) {
-        for (Todo todo : todos) {
-            if (todo.getId() == id) {
+        for(Todo todo:todos) {
+            if(todo.getId() == id) {
                 return todo;
             }
         }
+
         return null;
     }
+
 }
