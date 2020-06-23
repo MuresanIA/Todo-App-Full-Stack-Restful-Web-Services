@@ -9,15 +9,15 @@ import java.util.List;
 
 
 @Service
- public class TodoHardcodedService {
+public class TodoHardcodedService {
 
     private static List<Todo> todos = new ArrayList<>();
     private static int idCounter = 0;
 
     static {
-        todos.add(new Todo(++idCounter, "alex","Learn to Code 2", new Date(), false ));
-        todos.add(new Todo(++idCounter, "alex","Learn about Angular 2", new Date(), false ));
-        todos.add(new Todo(++idCounter, "alex","Learn about Spring", new Date(), false ));
+        todos.add(new Todo(++idCounter, "alex","Learn 1", new Date(), false ));
+        todos.add(new Todo(++idCounter, "alex","Learn 2", new Date(), false ));
+        todos.add(new Todo(++idCounter, "alex","Learn 3", new Date(), false ));
     }
 
     public List<Todo> findAll() {
