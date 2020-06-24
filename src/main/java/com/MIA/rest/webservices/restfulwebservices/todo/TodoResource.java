@@ -27,7 +27,6 @@ public class TodoResource {
         return todoService.findById(id);
     }
 
-    //DELETE /users/{username}/todos/{id}
     @DeleteMapping("/users/{username}/todos/{id}")
     public ResponseEntity<Void> deleteTodo(
             @PathVariable String username, @PathVariable long id){
@@ -41,9 +40,6 @@ public class TodoResource {
         return ResponseEntity.notFound().build();
     }
 
-
-    //Edit/Update a Todo
-    //PUT /users/{user_name}/todos/{todo_id}
     @PutMapping("/users/{username}/todos/{id}")
     public ResponseEntity<Todo> updateTodo(
             @PathVariable String username,
@@ -60,9 +56,6 @@ public class TodoResource {
 
         Todo createdTodo = todoService.save(todo);
 
-        //Location
-        //Get current resource url
-        ///{id}
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(createdTodo.getId()).toUri();
 
