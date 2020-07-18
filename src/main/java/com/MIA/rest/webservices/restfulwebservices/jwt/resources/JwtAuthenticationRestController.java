@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
 
 @RestController
-@CrossOrigin(origins = "https://todo-app7.herokuapp.com/")
+@CrossOrigin
 public class JwtAuthenticationRestController {
 
   @Value("${jwt.http.request.header}")
