@@ -4,7 +4,6 @@ package com.MIA.rest.webservices.restfulwebservices.todo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -15,9 +14,9 @@ public class TodoHardcodedService {
     private static long idCounter = 0;
 
     static {
-        todos.add(new Todo(++idCounter, "alex","Learn 1", new Date(), false ));
-        todos.add(new Todo(++idCounter, "alex","Learn 2", new Date(), false ));
-        todos.add(new Todo(++idCounter, "alex","Learn 3", new Date(), false ));
+//        todos.add(new Todo(++idCounter, "alex","Learn 1", new Date(), false ));
+//        todos.add(new Todo(++idCounter, "alex","Learn 2", new Date(), false ));
+//        todos.add(new Todo(++idCounter, "alex","Learn 3", new Date(), false ));
     }
 
     public List<Todo> findAll() {
