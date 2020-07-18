@@ -10,7 +10,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@CrossOrigin(origins = "https://todo-app7.herokuapp.com/")
+@CrossOrigin
 @RestController
 public class TodoJpaResource {
 
