@@ -22,6 +22,8 @@ public class JwtInMemoryUserDetailsService implements UserDetailsService {
     //$2a$10$Edv7je02CvihIVISyGpfQeUUBneDEdJ.aX8rA634z8B7S5mZmf8Jq
   }
 
+
+
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     Optional<JwtUserDetails> findFirst = inMemoryUserList.stream()
