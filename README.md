@@ -6,4 +6,6 @@
 - Spring - Security
 - JWT Authentication
 - MySQL
+- JPA
+- Hibernate
 
