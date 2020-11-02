@@ -9,3 +9,5 @@
 - JPA
 - Hibernate
 
+### Todo - App is deployed on Heroku:
+https://todo-app7.herokuapp.com/
